@@ -10,7 +10,7 @@ namespace RegexProject
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1.Enter Valid Name\n2.Enter Valid Last Name\n3.Enter Valid Email ID\n4.Enter Valid Mobile Number");
+                Console.WriteLine(" 1.Enter Valid Name\n2.Enter Valid Last Name\n3.Enter Valid Email ID\n4.Enter Valid Mobile Number\nRule1:\n5.Enter minimum 8 charecters");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -29,6 +29,11 @@ namespace RegexProject
                     case 4:
                         UserRegistrationProblem mobileNumber = new UserRegistrationProblem();
                         mobileNumber.CheckMobileNumber();
+                        break;
+                    case 5:
+                        Console.WriteLine("As a User need to follow pre-defined Password rules.\nRule1:");
+                        UserRegistrationProblem characters = new UserRegistrationProblem();
+                        characters.CheckCharacters();
                         break;
                     default:
                         flag = false;

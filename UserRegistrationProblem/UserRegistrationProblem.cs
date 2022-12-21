@@ -61,7 +61,7 @@ namespace RegexProject
         {
             Console.WriteLine("Enter Mobile Number");
             var MobileNumber = Console.ReadLine();
-            string pattern = @"^[0-9]{10}$";
+            string pattern = @"^91+[ ][0-9]{10}$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(MobileNumber))
             {
@@ -71,6 +71,22 @@ namespace RegexProject
             else
             {
                 Console.WriteLine(MobileNumber + " is Invalid Mobile Number");
+            }
+        }
+        public void CheckCharacters()
+        {
+            Console.WriteLine("Enetr Minimum 8 Charecters");          
+            var characters = Console.ReadLine();
+            string pattern = @"^[a-z]{8,}$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(characters))
+            {
+
+                Console.WriteLine(characters + " is Valid characters");
+            }
+            else
+            {
+                Console.WriteLine(characters + " is Invalid characters");
             }
         }
     }
