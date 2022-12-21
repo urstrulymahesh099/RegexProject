@@ -57,5 +57,21 @@ namespace RegexProject
                 Console.WriteLine(email + " is Invalid Email ID");
             }
         }
+        public void CheckMobileNumber()
+        {
+            Console.WriteLine("Enter Mobile Number");
+            var MobileNumber = Console.ReadLine();
+            string pattern = @"^[0-9]{10}$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(MobileNumber))
+            {
+
+                Console.WriteLine(MobileNumber + " is Valid Mobile Number");
+            }
+            else
+            {
+                Console.WriteLine(MobileNumber + " is Invalid Mobile Number");
+            }
+        }
     }
 }
