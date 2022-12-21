@@ -89,5 +89,21 @@ namespace RegexProject
                 Console.WriteLine(characters + " is Invalid characters");
             }
         }
+        public void CheckUpperCaseCharacters()
+        {
+            Console.WriteLine("Enetr UpperCase Charecters");
+            var uppercasecharacters = Console.ReadLine();
+            string pattern = @"^[A-Z]{1}[a-z]{8,}$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(uppercasecharacters))
+            {
+
+                Console.WriteLine(uppercasecharacters + " is Valid uppercase characters");
+            }
+            else
+            {
+                Console.WriteLine(uppercasecharacters + " is Invalid uppercase characters");
+            }
+        }
     }
 }
