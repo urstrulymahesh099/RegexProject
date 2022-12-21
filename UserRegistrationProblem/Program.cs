@@ -10,7 +10,7 @@ namespace RegexProject
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1.Enter Valid Name\n2.Enter Valid Last Name");
+                Console.WriteLine(" 1.Enter Valid Name\n2.Enter Valid Last Name\n3.Enter Valid Email ID");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -21,6 +21,10 @@ namespace RegexProject
                     case 2:
                         UserRegistrationProblem lastname = new UserRegistrationProblem();
                         lastname.CheckLastName();
+                        break;
+                    case 3:
+                        UserRegistrationProblem email = new UserRegistrationProblem();
+                        email.CheckEmail();
                         break;
                     default:
                         flag = false;

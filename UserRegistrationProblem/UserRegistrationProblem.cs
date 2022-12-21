@@ -41,5 +41,21 @@ namespace RegexProject
                 Console.WriteLine(name + " is Invalid Name");
             }
         }
+        public void CheckEmail()
+        {
+            Console.WriteLine("Enter Email ID");
+            var email = Console.ReadLine();
+            string pattern = "^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(email))
+            {
+
+                Console.WriteLine(email + " is Valid Email ID");
+            }
+            else
+            {
+                Console.WriteLine(email + " is Invalid Email ID");
+            }
+        }
     }
 }
