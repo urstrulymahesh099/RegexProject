@@ -7,10 +7,10 @@ namespace RegexProject
         {
             Console.WriteLine("Welcome to UserRegistrationProblem Problem Statements");
             Console.WriteLine("Select Below Mention Options");
-            bool flag = true;
-            while (flag)
+            
+            while (true)
             {
-                Console.WriteLine(" 1.Enter Valid Name\n2.Enter Valid Last Name\n3.Enter Valid Email ID\n4.Enter Valid Mobile Number\nRule1:\n5.Enter minimum 8 charecters\nRule2:\n6.Enter uppercase character");
+                Console.WriteLine(" 1.Enter Valid Name\n2.Enter Valid Last Name\n3.Enter Valid Email ID\n4.Enter Valid Mobile Number\nRule1:\n5.Enter minimum 8 charecters\nRule2:\n6.Enter uppercase character\nRule3:\n7.Enetr Numeric Number");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -39,8 +39,11 @@ namespace RegexProject
                         UserRegistrationProblem uppercharacters = new UserRegistrationProblem();
                         uppercharacters.CheckUpperCaseCharacters();
                         break;
+                    case 7:
+                        UserRegistrationProblem number = new UserRegistrationProblem();
+                        number.CheckNumericNumber();
+                        break;
                     default:
-                        flag = false;
                         Console.WriteLine("Try Again");
                         break;
                 }

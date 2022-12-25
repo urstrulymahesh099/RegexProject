@@ -105,5 +105,22 @@ namespace RegexProject
                 Console.WriteLine(uppercasecharacters + " is Invalid uppercase characters");
             }
         }
+        public void CheckNumericNumber()
+        {
+            Console.WriteLine("Enetr Numeric Number");
+            var numericNumber = Console.ReadLine();
+            string pattern = @"^[A-Z]{1}[a-z]{8,}[0-9]{1}$";
+
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(numericNumber))
+            {
+
+                Console.WriteLine(numericNumber + " is Valid Numeric Number");
+            }
+            else
+            {
+                Console.WriteLine(numericNumber + " is valid Numeric Number");
+            }
+        }
     }
 }
