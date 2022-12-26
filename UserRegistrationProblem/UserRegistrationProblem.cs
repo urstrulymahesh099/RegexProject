@@ -122,5 +122,23 @@ namespace RegexProject
                 Console.WriteLine(numericNumber + " is valid Numeric Number");
             }
         }
+        public void CheckSpecialCharacter()
+        {
+            Console.WriteLine("Enetr SpecialCharacter");
+            var SpecialCharacter = Console.ReadLine();
+            string pattern = "^(?=.*?[A-Z]).{8,}$";
+            string pattern1 = "^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$";
+
+            Regex regex = new Regex(pattern1);
+            if (regex.IsMatch(SpecialCharacter))
+            {
+
+                Console.WriteLine(SpecialCharacter + " is Valid SpecialCharacter");
+            }
+            else
+            {
+                Console.WriteLine(SpecialCharacter + " is invalid SpecialCharacter");
+            }
+        }
     }
 }
